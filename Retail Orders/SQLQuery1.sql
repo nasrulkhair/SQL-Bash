@@ -1,3 +1,4 @@
+/*
 <<<<<<< HEAD
 SELECT * 
 FROM clean_orders
