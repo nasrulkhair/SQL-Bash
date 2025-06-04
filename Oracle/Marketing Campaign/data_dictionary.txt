@@ -1,0 +1,7 @@
+{"results":[{"columns":[{"name":"COL_NAME","type":"VARCHAR2"},{"name":"DESCRIPTION","type":"VARCHAR2"},{"name":"DATA_TYPE","type":"VARCHAR2"},{"name":"TRANSFORMATION_NOTE","type":"VARCHAR2"}],"items":
+[
+{"col_name":"year_birth","description":"Customer birth year","data_type":"NUMBER","transformation_note":"Removed outliers before 1914"}
+,{"col_name":"income","description":"Yearly household income","data_type":"NUMBER","transformation_note":"Imputed missing values with mean"}
+,{"col_name":"marital_status","description":"Marital status of customer","data_type":"VARCHAR2","transformation_note":"Standardized: Alone → Single, Together → Married, Absurd\/YOLO → N\/A, Widow → Divorced"}
+,{"col_name":"dt_customer","description":"Date customer joined","data_type":"DATE","transformation_note":"Validated date range and consistency"}
+]}]}
