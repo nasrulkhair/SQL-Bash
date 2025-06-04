@@ -1,0 +1,13 @@
+{"results":[{"columns":[{"name":"TABLE_NAME","type":"VARCHAR2"},{"name":"COL_NAME","type":"VARCHAR2"},{"name":"DESCRIPTION","type":"VARCHAR2"},{"name":"DATA_TYPE","type":"VARCHAR2"},{"name":"TRANSFORMATION_NOTE","type":"VARCHAR2"},{"name":"ROWS_AFFECTED","type":"NUMBER"}],"items":
+[
+{"table_name":"customers","col_name":"customer_id","description":"set PK to customer_id","data_type":"-","transformation_note":"add constraint pk_customers"}
+,{"table_name":"products","col_name":"product_id","description":"set PK to product_id","data_type":"-","transformation_note":"add constraint pk_products"}
+,{"table_name":"products","col_name":"all columns","description":"remove duplicates before setting PK","data_type":"-","transformation_note":"necessary due to uniqueness of PK","rows_affected":61865}
+,{"table_name":"order_details","col_name":"order_id","description":"set PK to order_id","data_type":"-","transformation_note":"add constraint pk_orders_details"}
+,{"table_name":"order_details","col_name":"customer_id","description":"set FK to customer_id","data_type":"-","transformation_note":"set FK to customer_id reference to customers table"}
+,{"table_name":"order_items","col_name":"item_id","description":"assign new col item_id","data_type":"NUMBER","transformation_note":"using row_number() method to add values for newly created column item_id","rows_affected":89316}
+,{"table_name":"order_items","col_name":"item_id","description":"set PK to item_id","data_type":"-","transformation_note":"add constraint pk_items"}
+,{"table_name":"order_items","col_name":"order_id","description":"set FK to item_id","data_type":"-","transformation_note":"set FK to order_id reference to order_details table"}
+,{"table_name":"order_items","col_name":"product_id","description":"set FK to product_id","data_type":"-","transformation_note":"set FK to product_id reference to products table"}
+,{"table_name":"payment","col_name":"order_id","description":"set FK to order_id","data_type":"-","transformation_note":"set FK to order_id reference to order_details table"}
+]}]}
